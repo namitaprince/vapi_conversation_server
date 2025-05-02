@@ -7,7 +7,7 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: 'http://localhost:5173', // Your React app URL
+  origin: 'https://bejewelled-cobbler-62d5df.netlify.app', // Your React app URL
   methods: ['GET', 'POST'],
   credentials: true
 }));
@@ -33,7 +33,7 @@ app.get('/api/token', async (req, res) => {
         tag: "public",
         restrictions: {
           enabled: true,
-          allowedOrigins: ["http://localhost:5173"],
+          allowedOrigins: ["https://bejewelled-cobbler-62d5df.netlify.app"],
           allowedAssistantIds: [assistantId]
         }
       }
